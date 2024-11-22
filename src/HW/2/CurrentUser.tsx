@@ -1,14 +1,14 @@
 import { UserType } from './HW2';
 
 type CurrentUserPropsType = {
-  user: UserType // пропиши типизацию
+  curUser: UserType // пропиши типизацию
 };
 
-export const CurrentUser = (props: CurrentUserPropsType) => {
+export const CurrentUser = ({curUser}: CurrentUserPropsType) => {
   return (
-    <li key={props.user.id} id={`hw02-user-${props.user.id}`}>
-      <strong>{props.user.name}</strong> (Age: {props.user.age})<strong> Address: </strong>
-      {props.user.address.street}, {props.user.address.city}
+    <li key={curUser.id} id={`hw02-user-${curUser.id}`}>
+      <strong>{curUser.name}</strong> (Age: {curUser.age})<strong> Address: </strong>
+      {curUser.address.street}, {curUser.address.city}
     </li>
   );
 };

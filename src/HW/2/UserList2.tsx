@@ -15,7 +15,7 @@ export const UserList2 = ({users, filterUsers}: UserList2PropsType) => {
 
 			<ul>
 			  {users.myFriends.map((user) => (
-			    <CurrentUser  user={user}/>
+			    <CurrentUser  curUser={user}/>
 			  ))}
 			</ul>
 		</div>
